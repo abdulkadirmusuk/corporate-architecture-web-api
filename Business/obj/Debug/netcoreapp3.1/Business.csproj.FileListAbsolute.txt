@@ -1,0 +1,3 @@
+C:\Users\abdul\source\repos\CorporateArchitectureProject\Business\obj\Debug\netcoreapp3.1\Business.AssemblyInfoInputs.cache
+C:\Users\abdul\source\repos\CorporateArchitectureProject\Business\obj\Debug\netcoreapp3.1\Business.AssemblyInfo.cs
+C:\Users\abdul\source\repos\CorporateArchitectureProject\Business\obj\Debug\netcoreapp3.1\Business.csproj.CoreCompileInputs.cache
