@@ -6,4 +6,3 @@ C:\Users\abdul\source\repos\CorporateArchitectureProject\Core\obj\Debug\netcorea
 C:\Users\abdul\source\repos\CorporateArchitectureProject\Core\obj\Debug\netcoreapp3.1\Core.csproj.CoreCompileInputs.cache
 C:\Users\abdul\source\repos\CorporateArchitectureProject\Core\obj\Debug\netcoreapp3.1\Core.dll
 C:\Users\abdul\source\repos\CorporateArchitectureProject\Core\obj\Debug\netcoreapp3.1\Core.pdb
-C:\Users\abdul\source\repos\CorporateArchitectureProject\Core\obj\Debug\netcoreapp3.1\Core.csprojAssemblyReference.cache

@@ -11,7 +11,7 @@ namespace ConsoleUI
         //Open Closed Principle - Eklenen yeni bir şey mevcut sistemi bozmamalı
         static void Main(string[] args)
         {
-            //ProductTest(); Product için kodlarım
+            ProductTest(); 
             //CategoryTest(); Category için kodlarım
 
         }
@@ -43,10 +43,20 @@ namespace ConsoleUI
                 Console.WriteLine(product.ProductName);
             }*/
 
-            foreach (var product in productManager.GetProductDetails())
+            var result = productManager.GetProductDetails();
+            if (result.Success)
             {
-                Console.WriteLine(product.ProductName + " - "+product.CategoryName);
+                foreach (var product in result.Data)
+                {
+                    Console.WriteLine(product.ProductName + " - " + product.CategoryName);
+                }
+
             }
+            else
+            {
+                Console.WriteLine(result.Message);
+            }
+            
         }
     }
 }
