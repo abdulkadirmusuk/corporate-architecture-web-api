@@ -7,3 +7,6 @@ C:\Users\abdul\source\repos\CorporateArchitectureProject\Entities\obj\Debug\netc
 C:\Users\abdul\source\repos\CorporateArchitectureProject\Entities\obj\Debug\netcoreapp3.1\Entities.dll
 C:\Users\abdul\source\repos\CorporateArchitectureProject\Entities\obj\Debug\netcoreapp3.1\Entities.pdb
 C:\Users\abdul\source\repos\CorporateArchitectureProject\Entities\obj\Debug\netcoreapp3.1\Entities.csprojAssemblyReference.cache
+C:\Users\abdul\source\repos\CorporateArchitectureProject\Entities\bin\Debug\netcoreapp3.1\Core.dll
+C:\Users\abdul\source\repos\CorporateArchitectureProject\Entities\bin\Debug\netcoreapp3.1\Core.pdb
+C:\Users\abdul\source\repos\CorporateArchitectureProject\Entities\obj\Debug\netcoreapp3.1\Entities.csproj.CopyComplete

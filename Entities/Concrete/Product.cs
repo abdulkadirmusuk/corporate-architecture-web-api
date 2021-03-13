@@ -1,4 +1,5 @@
-﻿using Entities.Abstract;
+﻿//using Entities.Abstract; eski hali
+using Core.Entities;
 using System;
 using System.Collections.Generic;
 using System.Text;
