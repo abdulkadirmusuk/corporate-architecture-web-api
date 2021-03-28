@@ -1,6 +1,9 @@
 ﻿using Autofac;
+using Autofac.Extras.DynamicProxy;
 using Business.Abstract;
 using Business.Concrete;
+using Castle.DynamicProxy;
+using Core.Utilities.Interceptors;
 using DataAccess.Abstract;
 using DataAccess.Concrete.EntityFramework;
 using System;
@@ -22,6 +25,15 @@ namespace Business.DependencyResolvers.Autofac
             //içinde data tutulmayan nesneler için singleton kullanılır.Herkeste görünmesini/kullanmasını istediğimiz ortak yapılarda kullanılır
             builder.RegisterType<EfProductDal>().As<IProductDal>().SingleInstance();
             //Buraya logic şekilde hangi instance ların ne şartlar da üretileceğini yazabiliriz.
+
+            //27-33 satırşaro arası : Reflection ile çalışma anında şu işleri yap demek...
+            var assembly = System.Reflection.Assembly.GetExecutingAssembly();
+
+            builder.RegisterAssemblyTypes(assembly).AsImplementedInterfaces() //register edilen tip için(assembly), gerçek zamanlı olrak implemente edilen interfaceleri bul, 
+                .EnableInterfaceInterceptors(new ProxyGenerationOptions() //onlar için yazmış olduğumuz AspectInterceporSelector sınıfını başlat (yani aspect kullan dedik)
+                {
+                    Selector = new AspectInterceptorSelector()
+                }).SingleInstance();
         }
     }
 }

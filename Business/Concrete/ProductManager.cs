@@ -1,6 +1,8 @@
 ﻿using Business.Abstract;
 using Business.Constants;
 using Business.ValidationRules.FluentValidation;
+using Core.Aspects.Autofac.Validation;
+using Core.CrossCuttingConcerns.Validation;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using DataAccess.Concrete.InMemory;
@@ -23,6 +25,7 @@ namespace Business.Concrete
             _productDal = productDal;
         }
 
+        [ValidationAspect(typeof(ProductValidator))]//Bu methodu product validator tipini kullanarak doğrula demektir. 
         public IResult Add(Product product)
         {
             //business codes
@@ -47,6 +50,11 @@ namespace Business.Concrete
             //{
             //    throw new ValidationException(result.Errors);
             //}
+
+            //Bir üstteki mekanizmayı cross cutting concerns altında validation olarak ortak bir yapıya kavuşturduk
+
+            //ValidationTool.Validate(new ProductValidator(), product); //Bu koddan validation aspect attribute u ile kurtulmuş olduk
+
 
             _productDal.Add(product);
             return new Result(true,Messages.ProductAdded);
