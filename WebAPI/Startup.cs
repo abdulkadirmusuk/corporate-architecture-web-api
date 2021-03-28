@@ -31,8 +31,13 @@ namespace WebAPI
         {
             //Autofac,Ninject,CastleWindsor,StructureMap,LightInject,DryJect-->IoC Containers...
             services.AddControllers();
-            services.AddSingleton<IProductService,ProductManager>();//IProductService isteniyorsa ProductManager instance ı geri üretir
-            services.AddSingleton<IProductDal, EfProductDal>();//IProductDal istenirse geriye EfProductDal new() üretilip verilir
+
+            //services.AddSingleton<IProductService, ProductManager>();//IProductService isteniyorsa ProductManager instance ı geri üretir
+            //services.AddSingleton<IProductDal, EfProductDal>();//IProductDal istenirse geriye EfProductDal new() üretilip verilir
+
+            //yukarıdaki kodları comment ettim çünkü instance üretme olarak microsoft un kendi alt yapısını kullanma autofac kullan dedik program.cs de (WebAPI layer)
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -1,10 +1,12 @@
 ﻿using Business.Abstract;
 using Business.Constants;
+using Business.ValidationRules.FluentValidation;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using DataAccess.Concrete.InMemory;
 using Entities.Concrete;
 using Entities.DTOs;
+using FluentValidation;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -24,11 +26,28 @@ namespace Business.Concrete
         public IResult Add(Product product)
         {
             //business codes
-            if (product.ProductName.Length<2)
+            //validation : buraya eklenecek  nesnenin(product) yapısal olarak uygun olup olmadığını kontrol etmeye doğrulama denir(örn: productname en az 3 karakter olmalı gibi ...)
+            //business : iş kuralına uyuyuorsa ürün eklensin. örneğin 
+            //fluent validation ile validation rule larımızı merkezi bir noktadan yöneteceğiz
+            //Entity nesnelerinde gerekli alanları [Required] attribute ile geçmek riskli olabilir. SOLID e aykırı bir kullanımdır
+
+
+            /*if (product.ProductName.Length<2)//validattion
             {
                 //kötü kod
                 return new ErrorResult(Messages.ProductNameInvalid);
-            }
+            }*/
+
+            //Cross Cutting Concerns(Log,Cache,Transaction, Authorization vs...)
+
+            //var context = new ValidationContext<Product>(product);
+            //ProductValidator productValidator = new ProductValidator();
+            //var result = productValidator.Validate(context);
+            //if (!result.IsValid)
+            //{
+            //    throw new ValidationException(result.Errors);
+            //}
+
             _productDal.Add(product);
             return new Result(true,Messages.ProductAdded);
         }
