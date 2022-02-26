@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "5F/KsfICweKgt6vGLQbNA7j2Yaj0/0rh+x0W/vPEc5pesw9KrpwHwbc1qEjwdzgAcv1aHOTEfztk0ALMUH31Ug==",
+  "dgSpecHash": "BcaxJtTOfcZmDEYfXpr5fMVvOt0jrkicFyzhoIomr3/D4fKCiIdE5ASysbg55QZyTwtM313JXjjjGcv4jgMT7g==",
   "success": true,
   "projectFilePath": "C:\\Users\\abdul\\source\\repos\\CorporateArchitectureProject\\ConsoleUI\\ConsoleUI.csproj",
   "expectedPackageFiles": [
@@ -139,7 +139,8 @@
     "C:\\Users\\abdul\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\abdul\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\abdul\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\abdul\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    "C:\\Users\\abdul\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
+    "C:\\Users\\abdul\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.22\\microsoft.netcore.app.host.win-x64.3.1.22.nupkg.sha512"
   ],
   "logs": []
 }
